@@ -16,7 +16,7 @@ v2=parseFloat(document.getElementById('v2').value);
 s1=parseFloat(document.getElementById('s1').value);
 s2=parseFloat(document.getElementById('s2').value);
 		if (s1==1 && s2==1){
-		// document.getElementById("cktdiagram1").src = "./images/supcase1.jpg";
+		 document.getElementById("diagram").src = "images/case1.png";
 			c1=1;
 			i11 = v1/(r1+r3);
 			i12 = 0;
@@ -53,7 +53,7 @@ s1=parseFloat(document.getElementById('s1').value);
 s2=parseFloat(document.getElementById('s2').value);
 		if (s1==1 && s2==2)
 		{
-			// document.getElementById("cktdiagram1").src = "./images/supcase2.jpg";
+			 document.getElementById("diagram").src = "images/case2.png";
 				document.f1.A1.value = i11.toPrecision(5);
 			document.f1.A2.value = i12.toPrecision(5);
 			document.f1.A3.value = i13.toPrecision(5);
@@ -79,7 +79,7 @@ s1=parseFloat(document.getElementById('s1').value);
 s2=parseFloat(document.getElementById('s2').value);
 		if (s1==2 && s2==1)
 		{
-			// document.getElementById("cktdiagram1").src = "./images/supcase3.jpg";
+			 document.getElementById("diagram").src = "images/case3.png";
 		        c3=1;
 				document.f1.A1.value = i21.toPrecision(5);
 				document.f1.A2.value = i22.toPrecision(5);
