@@ -51,16 +51,17 @@
         <input class="components" type="number" name="r1" value="30" id="r1" >
         <input class="components" type="number" name="r3" value="20" id="r3" >
         <input class="components" type="number" name="r2" value="100" id="r2" >
-        <input class="components" type="number" name="v2" value="50" id="v2" >
         <input class="components" type="number" name="v1" value="100" id="v1" >
+        <input class="components" type="number" name="v2" value="50" id="v2" >
+        
         <div class="switch">
           
-            <select name="s1" id="s1" >
-            <option value="1" selected="">Power</option><option value="2">Short</option></select>
+            <select name="s1" id="s1" ><option disabled="disabled" selected="selected">Switch S1</option>
+            <option value="1">Power</option><option value="2">Short</option></select>
           
           
-        <select name="s2" id="s2" >
-                <option value="1" selected="">Power</option><option value="2">Open</option></select>
+        <select name="s2" id="s2" ><option disabled="disabled" selected="selected"> Switch S2</option>
+                <option value="1">Power</option><option value="2">Open</option></select>
         </div>
         
                 <div class="ammeter">
@@ -73,7 +74,7 @@
 
         </div>
       </div>
-        <div class="container-cases">
+       
           <ul class="tabs">
             <li>
               <input type="radio" checked="" name="tabs" id="tab1">
@@ -142,10 +143,27 @@
             
               </div>
             </li>	
-    </ul>
-        </div>
-        
+    </ul>  
     </form>
+    
+      <!-- ----------table-------- -->
+      <div class="tablee">
+        <table cellspacing='0' style="font-size:12px; border: 2px solid black;">
+          <thread>
+              <h3> Observation Table: </h3>
+              <table cellspacing='0' style="font-size:12px; border: 2px solid black;"> 
+                <th colspan="3">In presence of both V and I</th><th colspan="3">In presence of V only</th><th colspan="3">In presence of I only</th></tr>
+          
+                <tr><th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current<br> I<sub>3</sub> (in amps)</th>
+                <th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current I<sub>3</sub><br> (in amps)</th>
+                <th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current I<sub>3</sub><br> (in amps)</th></tr>
+          </thread>
+          </table>
+          <table id="tb1" class="table">
+            <tr></tr></table>
+      </div>
+      
+    
     
     
 </body>

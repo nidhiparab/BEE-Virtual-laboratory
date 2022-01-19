@@ -23,9 +23,9 @@ s2=parseFloat(document.getElementById('s2').value);
 			i13 = i11;
 			i22 = v2;
 			i23 = v2*(r1/(r1+r3));
-			i21 = v2-i23;
-			i1 = i11 - i21;
-			i2 = i12 - i22;
+			i21 = (v2-i23)*(-1);
+			i1 = i11 + i21;
+			i2 = i12 + i22;
 			i3 = i13 + i23;
 			
 				document.f1.A1.value = i1.toPrecision(5);
@@ -95,3 +95,43 @@ s2=parseFloat(document.getElementById('s2').value);
 		}
 	}
 
+        function perform4()
+        {
+          var A11=document.f1.A11.value;
+            var A12=document.f1.A12.value;
+            var A13=document.f1.A13.value;
+            var A21=document.f1.A21.value;
+            var A22=document.f1.A22.value;
+            var A23=document.f1.A23.value;
+            var A31=document.f1.A31.value;
+            var A32=document.f1.A32.value;
+            var A33=document.f1.A33.value;
+           
+
+            var tr= document.createElement("tr");
+            var td1=tr.appendChild(document.createElement("td"));
+            var td2=tr.appendChild(document.createElement("td"));
+            var td3=tr.appendChild(document.createElement("td"));
+            var td4=tr.appendChild(document.createElement("td"));
+            var td5=tr.appendChild(document.createElement("td"));
+            var td6=tr.appendChild(document.createElement("td"));
+            var td7=tr.appendChild(document.createElement("td"));
+            var td8=tr.appendChild(document.createElement("td"));
+            var td9=tr.appendChild(document.createElement("td"));
+            td1.innerHTML=A11;
+            td2.innerHTML=A12;
+            td3.innerHTML=A13;
+            td4.innerHTML=A21;
+            td5.innerHTML=A22;
+            td6.innerHTML=A23;
+            td7.innerHTML=A31;
+            td8.innerHTML=A32;
+            td9.innerHTML=A33;
+            
+            document.getElementById("tb1").appendChild(tr);
+
+        }
+        function delStudent(Stud){
+            var s=Stud.parentNode.parentNode;
+            s.parentNode.removeChild(s);                  
+        }
