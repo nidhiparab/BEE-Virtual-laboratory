@@ -156,11 +156,13 @@ left:27.5%;
 /* ----------------simulation---------- */
 
 .tabs {
-  margin-left: 11%;
+  /* margin-left: 11%; */
   position: relative;
   width: 100%;
   list-style: none;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
   }
   .tab-content{
     display: none;
@@ -203,12 +205,13 @@ border: 2px solid #8AC007;
 }
 .tabs li{
 float:left;
+margin: 0% 5%;
 }
 
 .tabs label {
   display: flex;
 min-width: 10px;
-margin-left: 120px;
+/* margin-left: 120px; */
   text-align: center;
   padding: 20px 50px 20px 50px;
   border-radius: 2px 2px 0 0;

@@ -135,3 +135,31 @@ s2=parseFloat(document.getElementById('s2').value);
             var s=Stud.parentNode.parentNode;
             s.parentNode.removeChild(s);                  
         }
+
+function divContentChange(caseNumber){
+	console.log(caseNumber)
+
+	// var contentDiv = document.getElementById('contentDiv')
+
+	var headerCase = document.getElementById('headerCase')
+	var subheaderCase = document.getElementById('subheaderCase')
+
+	if(caseNumber == 1){
+		headerCase.textContent = "Determination of branch currents in presence of V and I :"
+		subheaderCase.textContent = "Select the switch S1 and S2 to power. And then click on Simulate."
+		//case1
+		return
+	}
+	else if(caseNumber == 2){
+		headerCase.textContent = "Determination of branch currents in presence of V and I :"
+		subheaderCase.textContent = "Select the switch S1 and S2 to power. And then click on Simulate."
+		//case2
+		return
+	}
+	
+	headerCase.textContent = "Determination of branch currents in presence of V and I :"
+	subheaderCase.textContent = "Select the switch S1 and S2 to power. And then click on Simulate."
+	return
+	//case3
+
+}
