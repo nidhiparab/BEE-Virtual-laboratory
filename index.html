@@ -56,12 +56,12 @@
         
         <div class="switch">
           
-            <select name="s1" id="s1" ><option disabled="disabled" selected="selected">Switch S1</option>
+            <select name="s1" id="s1" onchange="picChange(value)" ><option disabled="disabled" selected="selected">Switch S1</option>
             <option value="1">Power</option><option value="2">Short</option></select>
           
           
-        <select name="s2" id="s2" ><option disabled="disabled" selected="selected"> Switch S2</option>
-                <option value="1">Power</option><option value="2">Open</option></select>
+        <select name="s2" id="s2" onchange="picChange(value)"><option disabled="disabled" selected="selected"> Switch S2</option>
+                <option value="1">Power</option><option value="3" >Open</option></select>
         </div>
         
                 <div class="ammeter">
@@ -79,69 +79,44 @@
           <li>
             <input type="radio" name="tabs" id="tab1">
             <label for="tab1" onclick="divContentChange(1)">Case 1</label>
-            <div id="tab-content1" class="tab-content">
-              <h4 id="headerCase1"></h2><br>
-                <p id="subheaderCase1"><br></p>
-              <input type="button" value="Simulate" class="simulate" onclick="perform1()" >
-              <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
-              <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; width:160px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; width:160px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <br>
-              <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
-              <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <br>
-              <input type="text" name="A11" value="0" id="A11" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
-              <input type="text" name="A12" value="0" id="A12" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
-              <input type="text" name="A13" value="0" id="A13" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
-            </div>
           </li>
           <li>
             <input type="radio" name="tabs" id="tab2">
             <label for="tab2" onclick="divContentChange(2)">Case 2</label>
-            <div id="tab-content2" class="tab-content">
-              <h4 id="headerCase2"></h2><br>
-                <p id="subheaderCase2"><br></p>
-              <input type="button" value="Simulate" class="simulate" onclick="perform2()" >
-              
-              <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
-              <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly">
-              <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly">
-              <br>
-              <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
-              <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <br>
-              <input type="text" name="A21" value="0" id="A21" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
-              <input type="text" name="A22" value="0" id="A22" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
-              <input type="text" name="A23" value="0" id="A23" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
-           
-            </div>
           </li>
           <li>
             <input type="radio" name="tabs" id="tab3">
             <label for="tab3" onclick="divContentChange(3)">Case 3</label>
-            <div id="tab-content3" class="tab-content">
-              <h4 id="headerCase3"></h2><br>
-                <p id="subheaderCase3"><br></p>
-              
-              <input type="button" value="Simulate" class="simulate" onclick="perform3()" >
-              <input type="button" value="Fill data to the table" onclick="perform4()" style="cursor: pointer; background-color:#ffe26a; text-align:center; border-radius: 10px; font-size:13px; position:absolute; top:160px; right:20px; width:150px; height:40px">
-              <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly"> 
-              <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly">
-              <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly">
-              <br>
-              <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
-              <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
-              <br>
-              <input type="text" name="A31" value="0" id="A31" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
-              <input type="text" name="A32" value="0" id="A32" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
-              <input type="text" name="A33" value="0" id="A33" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
-          
-            </div>
           </li>	
   </ul>  
+       </div>
+       <div class="outside-info">
+         <div class="info-container">
+            <h4 id="headerCase">Determination of branch currents in presence of V and I :</h4><br>
+              <p id="subheaderCase">Select the switch S1 and S2 to power. And then click on Simulate.<br></p>
+            
+            <div class="outside-info">
+              <div style="width: 100%;">
+                <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly"> 
+                <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly">
+                <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly">
+                <br>
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
+                <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <br>
+                <input type="text" name="A01" value="0" id="A31" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
+                <input type="text" name="A02" value="0" id="A32" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+                <input type="text" name="A03" value="0" id="A33" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+              </div>
+            <div>
+            <input type="button" value="Simulate" class="simulate" onclick="simulate()">
+            <input id="case3Btn" type="button" value="Fill data to the table" onclick="perform4()" style="display: none; cursor: pointer; background-color:#ffe26a; text-align:center; border-radius: 10px; font-size:13px; width:150px; height:40px">
+            </div>
+            </div>
+          </div>
+
+         </div>
        </div>
          
     </form>

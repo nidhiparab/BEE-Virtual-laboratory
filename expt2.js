@@ -31,9 +31,11 @@ s2=parseFloat(document.getElementById('s2').value);
 				document.f1.A1.value = i1.toPrecision(5);
 				document.f1.A2.value = i2.toPrecision(5);
 				document.f1.A3.value = i3.toPrecision(5);
-				document.f1.A11.value = i1.toPrecision(5);
-				document.f1.A12.value = i2.toPrecision(5);
-				document.f1.A13.value = i3.toPrecision(5);
+				document.f1.A01.value = i1.toPrecision(5);
+				document.f1.A02.value = i2.toPrecision(5);
+				document.f1.A03.value = i3.toPrecision(5);
+
+				
 			
 			
 		}
@@ -57,9 +59,11 @@ s2=parseFloat(document.getElementById('s2').value);
 				document.f1.A1.value = i11.toPrecision(5);
 			document.f1.A2.value = i12.toPrecision(5);
 			document.f1.A3.value = i13.toPrecision(5);
-			document.f1.A21.value = i11.toPrecision(5);
-			document.f1.A22.value = i12.toPrecision(5);
-			document.f1.A23.value = i13.toPrecision(5);
+			document.f1.A01.value = i11.toPrecision(5);
+			document.f1.A02.value = i12.toPrecision(5);
+			document.f1.A03.value = i13.toPrecision(5);
+			
+		
 			
 			
 		}
@@ -84,9 +88,10 @@ s2=parseFloat(document.getElementById('s2').value);
 				document.f1.A1.value = i21.toPrecision(5);
 				document.f1.A2.value = i22.toPrecision(5);
 				document.f1.A3.value = i23.toPrecision(5);
-				document.f1.A31.value = i21.toPrecision(5);
-				document.f1.A32.value = i22.toPrecision(5);
-				document.f1.A33.value = i23.toPrecision(5);
+				document.f1.A01.value = i21.toPrecision(5);
+				document.f1.A02.value = i22.toPrecision(5);
+				document.f1.A03.value = i23.toPrecision(5);
+				
 					
 			}
 		else
@@ -96,17 +101,7 @@ s2=parseFloat(document.getElementById('s2').value);
 	}
 
         function perform4()
-        {
-          var A11=document.f1.A11.value;
-            var A12=document.f1.A12.value;
-            var A13=document.f1.A13.value;
-            var A21=document.f1.A21.value;
-            var A22=document.f1.A22.value;
-            var A23=document.f1.A23.value;
-            var A31=document.f1.A31.value;
-            var A32=document.f1.A32.value;
-            var A33=document.f1.A33.value;
-           
+        {         
 
             var tr= document.createElement("tr");
             var td1=tr.appendChild(document.createElement("td"));
@@ -118,74 +113,76 @@ s2=parseFloat(document.getElementById('s2').value);
             var td7=tr.appendChild(document.createElement("td"));
             var td8=tr.appendChild(document.createElement("td"));
             var td9=tr.appendChild(document.createElement("td"));
-            td1.innerHTML=A11;
-            td2.innerHTML=A12;
-            td3.innerHTML=A13;
-            td4.innerHTML=A21;
-            td5.innerHTML=A22;
-            td6.innerHTML=A23;
-            td7.innerHTML=A31;
-            td8.innerHTML=A32;
-            td9.innerHTML=A33;
+            td1.innerHTML=i1.toPrecision(5)
+            td2.innerHTML=i2.toPrecision(5)
+            td3.innerHTML=i3.toPrecision(5)
+            td4.innerHTML=i11.toPrecision(5)
+            td5.innerHTML=i12.toPrecision(5)
+            td6.innerHTML=i13.toPrecision(5)
+            td7.innerHTML=i21.toPrecision(5);
+            td8.innerHTML=i22.toPrecision(5);
+            td9.innerHTML=i23.toPrecision(5);
             
             document.getElementById("tb1").appendChild(tr);
 
         }
+
+
         function delStudent(Stud){
             var s=Stud.parentNode.parentNode;
             s.parentNode.removeChild(s);                  
         }
+
+		var caseTest = 1;
+
 		function divContentChange(caseNumber){
 			console.log(caseNumber)
+			caseTest = caseNumber
 		
 			// var contentDiv = document.getElementById('contentDiv')
 		
-			var headerCase1 = document.getElementById('headerCase1')
-			var subheaderCase1 = document.getElementById('subheaderCase1')
+			var headerCase = document.getElementById('headerCase')
+			var subheaderCase = document.getElementById('subheaderCase')
 
-			var headerCase2 = document.getElementById('headerCase2')
-			var subheaderCase2 = document.getElementById('subheaderCase2')
-
-			var headerCase3 = document.getElementById('headerCase3')
-			var subheaderCase3 = document.getElementById('subheaderCase3')
-			
 		
 			if(caseNumber == 1){
-				headerCase1.textContent = "Determination of branch currents in presence of V and I :"
-				subheaderCase1.textContent = "Select the switch S1 and S2 to power. And then click on Simulate."
-				element1 = document.getElementById('tab-content1')
-				element2 = document.getElementById('tab-content2')
-				element3 = document.getElementById('tab-content3')
-				element1.style.visibility = 'visible';
-				element2.style.visibility = 'hidden';
-				element3.style.visibility = 'hidden';
+				headerCase.textContent = "Determination of branch currents in presence of V and I :"
+				subheaderCase.textContent = "Select the switch S1 and S2 to power. And then click on Simulate."
 				//case1
 				return
 			}
 			else if(caseNumber == 2){
-				headerCase2.textContent = "Determination of branch currents in presence of V only :"
-				subheaderCase2.textContent = "Select the switch S1 and S2 to Open. And then click on Simulate."
-				element1 = document.getElementById('tab-content1')
-				element2 = document.getElementById('tab-content2')
-				element3 = document.getElementById('tab-content3')
-				element1.style.visibility = 'hidden';
-				element2.style.visibility = 'visible';
-				element3.style.visibility = 'hidden';
+				headerCase.textContent = "Determination of branch currents in presence of V only :"
+				subheaderCase.textContent = "Select the switch S1 and S2 to Open. And then click on Simulate."
 				//case2
 				return
 			}
 			else if(caseNumber == 3){
-				headerCase3.textContent = "Determination of branch currents in presence of I only :"
-				subheaderCase3.textContent = "Select the switch S1 to Short and S2 to power. And then click on Simulate."
-				element1 = document.getElementById('tab-content1')
-				element2 = document.getElementById('tab-content2')
-				element3 = document.getElementById('tab-content3')
-				element1.style.visibility = 'hidden';
-				element2.style.visibility = 'hidden';
-				element3.style.visibility = 'visible';
+				document.getElementById('case3Btn').style.display = "block"
+				headerCase.textContent = "Determination of branch currents in presence of I only :"
+				subheaderCase.textContent = "Select the switch S1 to Short and S2 to power. And then click on Simulate."
 				return
 				//case3
 			}
 			
 		
 		}
+
+		function simulate(){
+			if(caseTest == 1)
+				perform1()
+			else if(caseTest == 2)
+				perform2()
+			else
+				perform3()
+		}
+
+
+function picChange(circuitCon){
+	if(circuitCon == 2)
+		document.getElementById("diagram").src = "images/case3.png";
+	else if(circuitCon == 3)
+		document.getElementById("diagram").src = "images/case2.png";
+	else
+		document.getElementById("diagram").src = "images/case1.png";
+}
