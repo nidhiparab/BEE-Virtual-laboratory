@@ -109,9 +109,9 @@
                 <input type="text" name="A02" value="0" id="A32" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
                 <input type="text" name="A03" value="0" id="A33" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
               </div>
-            <div>
+            <div class="button">
             <input type="button" value="Simulate" class="simulate" onclick="simulate()">
-            <input id="case3Btn" type="button" value="Fill data to the table" onclick="perform4()" style="display: none; cursor: pointer; background-color:#ffe26a; text-align:center; border-radius: 10px; font-size:13px; width:150px; height:40px">
+            <input id="case3Btn" type="button" value="Fill data to the table" onclick="perform4()" style="display: none; cursor: pointer; background-color:#ffe26a; text-align:center; border-radius: 10px; font-size:13px; width:25vh; height:40px">
             </div>
             </div>
           </div>
@@ -121,23 +121,22 @@
          
     </form>
     
-      <!-- ----------table-------- -->
-      <div class="tablee">
-        <table cellspacing='0' style="font-size:12px; border: 2px solid black;">
-          <thread>
-              <h3> Observation Table: </h3>
-              <table cellspacing='0' style="font-size:12px; border: 2px solid black;"> 
-                <th colspan="3">In presence of both V and I</th><th colspan="3">In presence of V only</th><th colspan="3">In presence of I only</th></tr>
-          
-                <tr><th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current<br> I<sub>3</sub> (in amps)</th>
-                <th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current I<sub>3</sub><br> (in amps)</th>
-                <th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current I<sub>3</sub><br> (in amps)</th></tr>
-          </thread>
-          </table>
-          <table id="tb1" class="table">
-            <tr></tr></table>
-      </div>
-      
+     <!-- ----------table-------- -->
+     <div class="tablee">
+      <table cellspacing='0' style="font-size:12px; border: 2px solid black;">
+        <thread>
+            <h3> Observation Table: </h3>
+            <table cellspacing='0' style="font-size:12px; border: 2px solid black;"> 
+              <th colspan="3">In presence of both V and I</th><th colspan="3">In presence of V only</th><th colspan="3">In presence of I only</th></tr>
+        
+              <tr><th>I<sub>1</sub><br>(in A)</th><th>I<sub>2</sub><br>(in A)</th><th>I<sub>3</sub><br>(in A)</th>
+                <th>I<sub>1</sub><br>(in A)</th><th>I<sub>2</sub><br>(in A)</th><th>I<sub>3</sub><br>(in A)</th>
+                <th>I<sub>1</sub><br>(in A)</th><th>I<sub>2</sub><br>(in A)</th><th>I<sub>3</sub><br>(in A)</th></tr>
+        </thread>
+        </table>
+        <table id="tb1" class="table">
+          <tr></tr></table>
+    </div>
     
     
     

@@ -53,7 +53,7 @@ v1=parseFloat(document.getElementById('v1').value);
 v2=parseFloat(document.getElementById('v2').value);
 s1=parseFloat(document.getElementById('s1').value);
 s2=parseFloat(document.getElementById('s2').value);
-		if (s1==1 && s2==2)
+		if (s1==1 && s2==3)
 		{
 			 document.getElementById("diagram").src = "images/case2.png";
 				document.f1.A1.value = i11.toPrecision(5);
