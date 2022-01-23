@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superposition Theorem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/v4-shims.min.css">
+<link rel="icon" href="images/tabicon.png" type="image/x-icon">
+</head>
+<body>
+      <form method="post" name ="f1">
+        <script src="expt2.js"></script>
+        <h1 class="title">SUPERPOSITION THEOREM</h1>
+        
+        <div class="col">
+          <div class="dropdown">
+            <p> INSTRUCTIONS</p>
+            <div class="dropdown-content">
+                <ol type="1">
+                  Set all the resistances <b>R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub></b> and 
+                  choose any arbitrary values of <b>V</b> and <b>I</b>.<br>
+                  <h3> Experiment Part Select: </h3>
+                  <li><b>Case-1: In presence of both the sources</b><br>
+             Select switch of S<sub>1</sub> and S<sub>2</sub> to power and Simulate the program.
+              Observe the result from case 1 tab.<br>	
+                      <li><b>Case-2: In presence of V only</b></li>
+                   Apply switch S<sub>1</sub> to power and S<sub>2</sub> to Open. Simulate the program. Read ammeter values from Case 2 tab.<br>
+                      <li><b>Case-3: In presence of I only</b></li>
+                   Apply switch S<sub>1</sub> to short and S<sub>2</sub> to power. Simulate the program. Read ammeter values from Case 3 tab.<br>
+                       Click on <b>'Fill data to the table'</b> to update the observation table.<br>
+                         <b>Repeat the above steps to take other observations.</b><br><br>
+                         <b>All the resistances  are in ohms.</b><br> 
+  
+                </ol> 
+  
+            </div>
+        </div>
+        </div>
+        <div class="container-pic">
+        
+          <div class="circuit">
+            <img id="diagram" src="images/S1.png">
+        
+        
+        <input class="components" type="number" name="r1" value="30" id="r1" >
+        <input class="components" type="number" name="r3" value="20" id="r3" >
+        <input class="components" type="number" name="r2" value="100" id="r2" >
+        <input class="components" type="number" name="v2" value="50" id="v2" >
+        <input class="components" type="number" name="v1" value="100" id="v1" >
+        <div class="switch">
+          
+            <select name="s1" id="s1" >
+            <option value="1" selected="">Power</option><option value="2">Short</option></select>
+          
+          
+        <select name="s2" id="s2" >
+                <option value="1" selected="">Power</option><option value="2">Open</option></select>
+        </div>
+        
+                <div class="ammeter">
+                  <input class="components" type="text" name="A1" value="0" id="A1" readonly="readonly">
+                  <input class="components" type="text" name="A2" value="0" id="A2" readonly="readonly">
+                  <input class="components" type="text" name="A3" value="0" id="A3" readonly="readonly">
+                </div>
+        
+    
+
+        </div>
+      </div>
+
+      <!-- -------------cases---------------- -->
+        <div class="container-cases">
+          <ul class="tabs">
+            <li>
+              <input type="radio" checked="" name="tabs" id="tab1">
+              <label for="tab1">Case 1</label>
+              <div id="tab-content1" class="tab-content">
+                <h4>Determination of branch currents in presence of V and I :</h2><br>
+                  Select the switch S<sub>1</sub> and S<sub>2</sub> to power.<br>And then click on Simulate.<br>
+                <input type="button" value="Simulate" class="simulate" onclick="perform1()" >
+                <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
+                <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; width:160px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; width:160px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <br>
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
+                <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <br>
+                <input type="text" name="A11" value="0" id="A11" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
+                <input type="text" name="A12" value="0" id="A12" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+                <input type="text" name="A13" value="0" id="A13" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="tabs" id="tab2">
+              <label for="tab2">Case 2</label>
+              <div id="tab-content2" class="tab-content">
+                <h4>Determination of branch currents in presence of V source only:</h2><br>
+                Select the switch S<sub>1</sub> to power and S<sub>2</sub> to open.<br>And then click on Simulate.<br>
+                <input type="button" value="Simulate" class="simulate" onclick="perform2()" >
+                
+                <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
+                <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly">
+                <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; width:160px; border:none; font-size:15px; color:yellow;" readonly="readonly">
+                <br>
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
+                <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <br>
+                <input type="text" name="A21" value="0" id="A21" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
+                <input type="text" name="A22" value="0" id="A22" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+                <input type="text" name="A23" value="0" id="A23" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+             
+              </div>
+            </li>
+            <li>
+              <input type="radio" name="tabs" id="tab3">
+              <label for="tab3">Case 3</label>
+              <div id="tab-content3" class="tab-content animated fadeIn">
+                <div class="inst">
+                  <h4>Determination of branch currents in presence of I source only:</h2><br>
+                    Select the switch S<sub>1</sub> to short and S<sub>2</sub> to power.<br>And then click on Simulate.<br>
+              </div>
+                
+                <input type="button" value="Simulate" class="simulate" onclick="perform3()" >
+                <input type="button" value="Fill data to the table" onclick="perform4()" style="cursor: pointer; background-color:#ffe26a; text-align:center; border-radius: 10px; font-size:13px; position:absolute; top:160px; right:20px; width:150px; height:40px">
+                <input type="text" value="A1 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly"> 
+                <input type="test" value="A2 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly">
+                <input type="text" value="A3 ammeter reading" style="background-color:transparent; text-align:center; font-size:15px; color:yellow; width:160px; border:none" readonly="readonly">
+                <br>
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; border:none; font-size:15px; color:yellow;" readonly="readonly"> 
+                <input type="test" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <input type="text" value="(in Amp)" style="background-color:transparent; text-align:center; width:140px; font-size:15px; color:yellow; border:none" readonly="readonly">
+                <br>
+                <input type="text" name="A31" value="0" id="A31" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly"> 
+                <input type="text" name="A32" value="0" id="A32" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+                <input type="text" name="A33" value="0" id="A33" style="background-color:#E3DE84; text-align:center; width:140px" readonly="readonly">
+            
+              </div>
+            </li>	
+    </ul>
+        </div>
+      
+          
+      </form>  
+
+      <!-- ----------table-------- -->
+      <div class="tablee">
+        <table cellspacing='0' style="font-size:12px; border: 2px solid black;">
+          <thread>
+            <div id="observation"  style="position:absolute; top:1300px; width:1160px">
+              <h3 style="text-align:left"> <u>Observation Table: </u></h3>
+              <table cellspacing='0' style="font-size:12px; border: 2px solid black;"> 
+            <th colspan="3">In presence of both V<sub>1</sub> and V<sub>2</sub></th><th colspan="3">In presence of V<sub>1</sub> only</th><th colspan="3">In presence of V<sub>2</sub> only</th></tr>
+          
+          <tr><th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current<br> I<sub>3</sub> (in amps)</th>
+          <th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current I<sub>3</sub><br> (in amps)</th>
+          <th>Branch current I<sub>1</sub><br> (in amps)</th><th>Branch current I<sub>2</sub><br> (in amps)</th><th>Branch current I<sub>3</sub><br> (in amps)</th></tr>
+          
+          </thread>
+          </table>
+          <table id="tb1" class="table">
+            <tr></tr></table>
+      </div>
+      
+    
+</body>
+</html>

@@ -154,21 +154,25 @@ left:27.5%;
 
 
 /* ----------------simulation---------- */
-
+.container{
+  display: flex;
+}
 .tabs {
-  margin-left: 11%;
+  /* margin-left: 11%; */
   position: relative;
   width: 100%;
   list-style: none;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
   }
   .tab-content{
-    display: none;
+    
     text-align: left;
     margin-top: 30px;
-    width: 1000px;
+    width: 100vh;
     font-size: 20px;
-    right: 5%; left: 5%;
+
     background: #023B59;
     padding: 50px 20px 50px 20px;
     color: white;
@@ -203,14 +207,15 @@ border: 2px solid #8AC007;
 }
 .tabs li{
 float:left;
+margin: 0% 5%;
 }
 
 .tabs label {
   display: flex;
 min-width: 10px;
-margin-left: 120px;
+/* margin-left: 120px; */
   text-align: center;
-  padding: 20px 50px 20px 50px;
+  padding: 2vh 5vh 2vh 5vh;
   border-radius: 2px 2px 0 0;
   color: #fff;
   font-size: 28px;
@@ -246,9 +251,10 @@ margin-bottom: 30px;
 }
 /* -------------table----------------- */
 .tablee{
+  justify-content: center;
   position: absolute;
-  margin: 100px;
-  margin-top: 500px; 
+  margin: 10vh;
+  margin-top: 50vh; 
   height: 100vh;
 }
 .tablee h3{
@@ -271,7 +277,7 @@ table {
 }
 table th {
 	padding:10px 0px 10px 0px;
-  width: 1000px;
+  width: 50vh;
 	border-top:1px solid #fafafa;
 	border-bottom:1px solid #e0e0e0;
 	border-left:1px solid #e0e0e0;

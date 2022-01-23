@@ -135,3 +135,57 @@ s2=parseFloat(document.getElementById('s2').value);
             var s=Stud.parentNode.parentNode;
             s.parentNode.removeChild(s);                  
         }
+		function divContentChange(caseNumber){
+			console.log(caseNumber)
+		
+			// var contentDiv = document.getElementById('contentDiv')
+		
+			var headerCase1 = document.getElementById('headerCase1')
+			var subheaderCase1 = document.getElementById('subheaderCase1')
+
+			var headerCase2 = document.getElementById('headerCase2')
+			var subheaderCase2 = document.getElementById('subheaderCase2')
+
+			var headerCase3 = document.getElementById('headerCase3')
+			var subheaderCase3 = document.getElementById('subheaderCase3')
+			
+		
+			if(caseNumber == 1){
+				headerCase1.textContent = "Determination of branch currents in presence of V and I :"
+				subheaderCase1.textContent = "Select the switch S1 and S2 to power. And then click on Simulate."
+				element1 = document.getElementById('tab-content1')
+				element2 = document.getElementById('tab-content2')
+				element3 = document.getElementById('tab-content3')
+				element1.style.visibility = 'visible';
+				element2.style.visibility = 'hidden';
+				element3.style.visibility = 'hidden';
+				//case1
+				return
+			}
+			else if(caseNumber == 2){
+				headerCase2.textContent = "Determination of branch currents in presence of V only :"
+				subheaderCase2.textContent = "Select the switch S1 and S2 to Open. And then click on Simulate."
+				element1 = document.getElementById('tab-content1')
+				element2 = document.getElementById('tab-content2')
+				element3 = document.getElementById('tab-content3')
+				element1.style.visibility = 'hidden';
+				element2.style.visibility = 'visible';
+				element3.style.visibility = 'hidden';
+				//case2
+				return
+			}
+			else if(caseNumber == 3){
+				headerCase3.textContent = "Determination of branch currents in presence of I only :"
+				subheaderCase3.textContent = "Select the switch S1 to Short and S2 to power. And then click on Simulate."
+				element1 = document.getElementById('tab-content1')
+				element2 = document.getElementById('tab-content2')
+				element3 = document.getElementById('tab-content3')
+				element1.style.visibility = 'hidden';
+				element2.style.visibility = 'hidden';
+				element3.style.visibility = 'visible';
+				return
+				//case3
+			}
+			
+		
+		}
